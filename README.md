@@ -44,3 +44,7 @@ Rongxin · [rongxin@u.nus.edu](mailto:rongxin@u.nus.edu) · [github.com/reycn/sm
 ## License
 
 [GNU Affero General Public License v3.0](LICENSE)
+
+---
+
+Made with Claude Fable 5.1
