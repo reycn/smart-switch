@@ -2,9 +2,11 @@
 
 [English](README.md) | 简体中文
 
-一个 macOS 菜单栏应用。按下 **⌘`**，它会根据你最近的切换记录，用 TypeSafe 的 [Jev](https://docs.typesafe.ai) 模型预测你接下来最可能想去的应用并直接切换过去。如果 Jev 在 1 秒内没有响应，就切换到上一个使用的应用。没有预览、没有界面——就像一次性的 ⌘Tab。
+在 macOS 上使用前沿人工智能的新版窗口切换器。它就知道你想使用哪个窗口。
 
-**⌃`** 的标签页切换在计划中，尚未实现。
+通过 TypeSafe 的 [Jev](https://docs.typesafe.ai) 模型预测，根据你最近的切换历史，实时预测。
+
+⌃`键的按tab键功能尚未实现。
 
 ## 工作原理
 
@@ -38,3 +40,7 @@
 ## 作者
 
 Rongxin · [rongxin@u.nus.edu](mailto:rongxin@u.nus.edu) · [github.com/reycn/smart-switch](https://github.com/reycn/smart-switch)
+
+## 许可证
+
+[GNU Affero General Public License v3.0](LICENSE)

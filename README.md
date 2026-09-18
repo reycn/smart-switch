@@ -2,7 +2,7 @@
 
 English | [简体中文](README.zh-CN.md)
 
-A macOS menu bar app. Press **⌘`** and it switches to the app you most likely want next, 
+Reimagined window switcher for macOS using frontier artificial intelligence. It just knows which window you wanna use.
 
 Predicted by TypeSafe's [Jev](https://docs.typesafe.ai) model from your recent switching history, in realtime.
 
@@ -40,3 +40,7 @@ The menu shows the last decision, with **Last Request** / **Last Response** subm
 ## Author
 
 Rongxin · [rongxin@u.nus.edu](mailto:rongxin@u.nus.edu) · [github.com/reycn/smart-switch](https://github.com/reycn/smart-switch)
+
+## License
+
+[GNU Affero General Public License v3.0](LICENSE)
