@@ -1,0 +1,5 @@
+build/
+.build/
+core/target/
+.DS_Store
+.vscode/
