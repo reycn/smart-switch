@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+  <title id="t">SmartSwitch</title>
+  <desc id="d">Press ⌘` — Jev predicts which window you want next and switches to it.</desc>
+  <style>
+    :root {
+      --bg: #F5F5F7; --fg: #1D1D1F; --muted: #86868B;
+      --win: #E9E9EE; --win-stroke: #D2D2D7; --bar: #C7C7CC; --dot: #C7C7CC;
+      --accent: #0A84FF; --key: #FFFFFF; --key-stroke: #D2D2D7; --shadow: rgba(0,0,0,0.10);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1C1C1E; --fg: #F5F5F7; --muted: #8E8E93;
+        --win: #2C2C2E; --win-stroke: #3A3A3C; --bar: #48484A; --dot: #48484A;
+        --accent: #0A84FF; --key: #2C2C2E; --key-stroke: #48484A; --shadow: rgba(0,0,0,0.45);
+      }
+    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .wordmark { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; fill: var(--fg); }
+    .tag { font-size: 16px; fill: var(--muted); letter-spacing: 0.01em; }
+    .cap { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; fill: var(--muted); }
+    .key { font-size: 18px; font-weight: 500; fill: var(--fg); }
+    .jev { font-size: 18px; font-weight: 700; fill: #FFFFFF; letter-spacing: -0.01em; }
+    .win { fill: var(--win); stroke: var(--win-stroke); stroke-width: 1; }
+    .bar { fill: var(--bar); }
+    .dot { fill: var(--dot); }
+  </style>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="var(--shadow)"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <marker id="head" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="var(--accent)"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="var(--bg)"/>
+
+  <text x="60" y="72" class="wordmark">SmartSwitch</text>
+  <text x="60" y="100" class="tag">One key. The window you were about to reach for.</text>
+
+  <!-- current window -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="150" width="360" height="210" rx="14" class="win"/>
+  </g>
+  <circle cx="144" cy="174" r="6" class="dot"/>
+  <circle cx="164" cy="174" r="6" class="dot"/>
+  <circle cx="184" cy="174" r="6" class="dot"/>
+  <rect x="144" y="206" width="220" height="14" rx="7" class="bar"/>
+  <rect x="144" y="236" width="160" height="14" rx="7" class="bar"/>
+  <rect x="144" y="266" width="250" height="14" rx="7" class="bar"/>
+  <rect x="144" y="296" width="120" height="14" rx="7" class="bar"/>
+  <text x="300" y="392" text-anchor="middle" class="cap">NOW</text>
+
+  <!-- predicted window: same material, lifted by a blue glow -->
+  <rect x="720" y="150" width="360" height="210" rx="14" fill="var(--accent)" opacity="0.28" filter="url(#glow)"/>
+  <g filter="url(#shadow)">
+    <rect x="720" y="150" width="360" height="210" rx="14" class="win"/>
+  </g>
+  <rect x="720.5" y="150.5" width="359" height="209" rx="13.5" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <circle cx="744" cy="174" r="6" class="dot"/>
+  <circle cx="764" cy="174" r="6" class="dot"/>
+  <circle cx="784" cy="174" r="6" class="dot"/>
+  <rect x="744" y="206" width="180" height="14" rx="7" class="bar"/>
+  <rect x="744" y="236" width="260" height="14" rx="7" class="bar"/>
+  <rect x="744" y="266" width="140" height="14" rx="7" class="bar"/>
+  <rect x="744" y="296" width="220" height="14" rx="7" class="bar"/>
+  <text x="900" y="392" text-anchor="middle" class="cap">NEXT</text>
+
+  <!-- arrow, annotated by Jev -->
+  <path d="M500 255 Q600 195 700 255" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" marker-end="url(#head)"/>
+  <g transform="translate(600 174)">
+    <rect x="-54" y="-20" width="108" height="40" rx="20" fill="var(--accent)"/>
+    <path transform="translate(-33 0) scale(0.75)" d="M0 -12 C1.5 -4 4 -1.5 12 0 C4 1.5 1.5 4 0 12 C-1.5 4 -4 1.5 -12 0 C-4 -1.5 -1.5 -4 0 -12 Z" fill="#FFFFFF"/>
+    <text x="8" y="6.5" text-anchor="middle" class="jev">Jev</text>
+  </g>
+  <g transform="translate(600 300)">
+    <rect x="-40" y="-20" width="80" height="40" rx="10" fill="var(--key)" stroke="var(--key-stroke)"/>
+    <text x="0" y="6.5" text-anchor="middle" class="key">⌘ `</text>
+  </g>
+</svg>

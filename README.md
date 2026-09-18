@@ -1,4 +1,4 @@
-# SmartSwitch
+<p align="center"><img src="docs/banner.svg" alt="SmartSwitch: press ⌘` and Jev predicts the window you want next" width="100%"></p>
 
 English | [简体中文](README.zh-CN.md)
 
